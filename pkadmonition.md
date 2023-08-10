@@ -1,20 +1,20 @@
 # Admonition
 
-```{card} Py Data Theme variables
-:class-card: slide
+```{admonition} Py Data Theme variables
+:class: slide
 
 ![pydata theme variables](_static/img/pydata.png)
 ```
 
 
-```{card} What is in a repo
-:class-card: slide
+```{admonition} What is in a repo
+:class: slide
 
 ![annotated repo](_static/img/repo.png)
 ```
 
-```{card} 
-:class-card: slide
+```{admonition} 
+:class: slide
 
 ![steps to make an issue](_static/img/issue.png)
 ```
