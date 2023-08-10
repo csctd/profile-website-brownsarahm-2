@@ -1,6 +1,6 @@
 # Welcome
 
-a site about me
+a site about me, an example of options
 
 
 
@@ -11,4 +11,5 @@ a site about me
 
 pkcards
 pkadmonition
+pkadmonition-style
 ```

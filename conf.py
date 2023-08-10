@@ -47,11 +47,15 @@ import yaml
 with open ('info.yml','r') as f:
     html_context = yaml.safe_load(f)
 
+# toggle source link (False hides)
+html_show_sourcelink = False
 
 html_theme_options = {
   "github_url": "https://github.com/username/",
   "twitter_url": "https://twitter.com/username",
   "search_bar_text": "Search this site...",
+  "content_footer_items":[],
+  "navbar_align": "content",
 #   "navbar_end": ["search-field.html"],
 }
 
