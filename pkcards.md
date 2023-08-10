@@ -1,0 +1,24 @@
+# Cards
+
+_a tagline above all slides_
+
+
+
+```{card} 
+:class-card: slide
+
+![pydata theme variables](_static/img/pydata.png)
+```
+
+
+```{card} 
+:class-card: slide
+
+![annotated repo](_static/img/repo.png)
+```
+
+```{card} 
+:class-card: slide
+
+![steps to make an issue](_static/img/issue.png)
+```
