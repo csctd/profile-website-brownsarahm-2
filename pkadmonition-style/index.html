@@ -12,10 +12,12 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="pkadmonition-style/" />
 <meta property="og:site_name" content="Dr. Brown" />
+<meta property="og:description" content="and controls:" />
 <meta property="og:image:width" content="1146" />
 <meta property="og:image:height" content="600" />
-<meta property="og:image" content="/_images/social_previews/summary_pkadmonition-style_29592723.png" />
-<meta property="og:image:alt" content="" />
+<meta property="og:image" content="/_images/social_previews/summary_pkadmonition-style_785029c6.png" />
+<meta property="og:image:alt" content="and controls:" />
+<meta name="description" content="and controls:" />
 <meta name="twitter:card" content="summary_large_image" />
 
     <title>Fancy A &#8212; Dr. Brown</title>
@@ -57,7 +59,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'pkadmonition-style';</script>
     <link rel="index" title="Index" href="../genindex/" />
     <link rel="search" title="Search" href="../search/" />
-    <link rel="prev" title="Admonition" href="../pkadmonition/" />
+    <link rel="prev" title="Fancy C" href="../pkcards-style/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -153,6 +155,13 @@
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../pkadmonition/">
                         Admonition
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../pkcards-style/">
+                        Fancy C
                       </a>
                     </li>
                 
@@ -278,6 +287,13 @@ document.write(`
                     </li>
                 
 
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../pkcards-style/">
+                        Fancy C
+                      </a>
+                    </li>
+                
+
                     <li class="nav-item current active">
                       <a class="nav-link nav-internal" href="#">
                         Fancy A
@@ -389,8 +405,13 @@ document.write(`
 <h1>Fancy A<a class="headerlink" href="#fancy-a" title="Permalink to this heading">#</a></h1>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>admonitions require a title and  this uses an admonition</p>
+<p>admonitions require a title and this uses an admonition without the slide class</p>
 </div>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>in a markdown file, you can mix html and markdown</p>
+</div>
+<div class = "slideshow-container" id ='slideshow'>
 <div class="slide blue codeicon admonition">
 <p class="admonition-title">Py Data Theme variables</p>
 <p><img alt="pydata theme variables" src="../_images/pydata.png" /></p>
@@ -403,6 +424,12 @@ document.write(`
 <p class="admonition-title">Making an Issue</p>
 <p><img alt="steps to make an issue" src="../_images/issue.png" /></p>
 </div>
+<input class='btn btn-danger' id="button" type="button" value="X" onclick="closeFullscreen()">
+<!--  -->
+<button class='btn btn-success' onclick="var el = document.getElementById('slideshow'); el.webkitRequestFullscreen();">
+    Presentation view</button>
+</div>
+<p>and controls:</p>
 </section>
 
 <div class="section ablog__blog_comments">
@@ -421,12 +448,12 @@ document.write(`
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../pkadmonition/"
+       href="../pkcards-style/"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Admonition</p>
+        <p class="prev-next-title">Fancy C</p>
       </div>
     </a>
 </div></div>
@@ -454,6 +481,7 @@ document.write(`
 <script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
 
 
+
 <script>
     let slideIndex = 0;
     let slides = document.getElementsByClassName("slide");
@@ -464,14 +492,14 @@ document.write(`
     function showSlides() {
         let i;
         let slides = document.getElementsByClassName("slide");
-        console.log('in')
-        console.log(slides.length)
-        console.log(slideIndex)
+        // console.log('in')
+        // console.log(slides.length)
+        // console.log(slideIndex)
 
         let dots = document.getElementsByClassName("dot");
         for (i = 0; i < slides.length; i++) {
-            console.log(i)
-            console.log('off')
+            // console.log(i)
+            // console.log('off')
             slides[i].style.display = "none";
         }
         slideIndex++;
@@ -485,6 +513,32 @@ document.write(`
         // dots[slideIndex - 1].className += " active";
         setTimeout(showSlides, 5000); // Change image every 2 seconds
     }
+
+
+    function openFullscreen() {
+            if (elem.requestFullscreen) {
+                elem.requestFullscreen();
+            } else if (elem.mozRequestFullScreen) { /* Firefox */
+                elem.mozRequestFullScreen();
+            } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
+                elem.webkitRequestFullscreen();
+            } else if (elem.msRequestFullscreen) { /* IE/Edge */
+                elem.msRequestFullscreen();
+            }
+    }
+
+
+    function closeFullscreen() {
+            if (document.exitFullscreen) {
+                document.exitFullscreen();
+            } else if (document.mozCancelFullScreen) { /* Firefox */
+                document.mozCancelFullScreen();
+            } else if (document.webkitExitFullscreen) { /* Chrome, Safari and Opera */
+                document.webkitExitFullscreen();
+            } else if (document.msExitFullscreen) { /* IE/Edge */
+                document.msExitFullscreen();
+            }
+        }
 </script>
 
   </body>

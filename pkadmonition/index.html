@@ -57,7 +57,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'pkadmonition';</script>
     <link rel="index" title="Index" href="../genindex/" />
     <link rel="search" title="Search" href="../search/" />
-    <link rel="next" title="Fancy A" href="../pkadmonition-style/" />
+    <link rel="next" title="Fancy C" href="../pkcards-style/" />
     <link rel="prev" title="Cards" href="../pkcards/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -154,6 +154,13 @@
                     <li class="nav-item current active">
                       <a class="nav-link nav-internal" href="#">
                         Admonition
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../pkcards-style/">
+                        Fancy C
                       </a>
                     </li>
                 
@@ -280,6 +287,13 @@ document.write(`
                 
 
                     <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../pkcards-style/">
+                        Fancy C
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
                       <a class="nav-link nav-internal" href="../pkadmonition-style/">
                         Fancy A
                       </a>
@@ -394,7 +408,7 @@ document.write(`
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>this and the warning above are also admonitions, but not <code class="docutils literal notranslate"><span class="pre">:class:</span> <span class="pre">slide</span></code> so they do not change</p>
+<p>this and the warning above are also admonitions, but not <code class="docutils literal notranslate"><span class="pre">:class:</span> <span class="pre">slide</span></code> so they are always here</p>
 </div>
 <div class="slide admonition">
 <p class="admonition-title">Py Data Theme variables</p>
@@ -435,11 +449,11 @@ document.write(`
       </div>
     </a>
     <a class="right-next"
-       href="../pkadmonition-style/"
+       href="../pkcards-style/"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Fancy A</p>
+        <p class="prev-next-title">Fancy C</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -468,6 +482,7 @@ document.write(`
 <script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
 
 
+
 <script>
     let slideIndex = 0;
     let slides = document.getElementsByClassName("slide");
@@ -478,14 +493,14 @@ document.write(`
     function showSlides() {
         let i;
         let slides = document.getElementsByClassName("slide");
-        console.log('in')
-        console.log(slides.length)
-        console.log(slideIndex)
+        // console.log('in')
+        // console.log(slides.length)
+        // console.log(slideIndex)
 
         let dots = document.getElementsByClassName("dot");
         for (i = 0; i < slides.length; i++) {
-            console.log(i)
-            console.log('off')
+            // console.log(i)
+            // console.log('off')
             slides[i].style.display = "none";
         }
         slideIndex++;
@@ -499,6 +514,32 @@ document.write(`
         // dots[slideIndex - 1].className += " active";
         setTimeout(showSlides, 5000); // Change image every 2 seconds
     }
+
+
+    function openFullscreen() {
+            if (elem.requestFullscreen) {
+                elem.requestFullscreen();
+            } else if (elem.mozRequestFullScreen) { /* Firefox */
+                elem.mozRequestFullScreen();
+            } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
+                elem.webkitRequestFullscreen();
+            } else if (elem.msRequestFullscreen) { /* IE/Edge */
+                elem.msRequestFullscreen();
+            }
+    }
+
+
+    function closeFullscreen() {
+            if (document.exitFullscreen) {
+                document.exitFullscreen();
+            } else if (document.mozCancelFullScreen) { /* Firefox */
+                document.mozCancelFullScreen();
+            } else if (document.webkitExitFullscreen) { /* Chrome, Safari and Opera */
+                document.webkitExitFullscreen();
+            } else if (document.msExitFullscreen) { /* IE/Edge */
+                document.msExitFullscreen();
+            }
+        }
 </script>
 
   </body>
