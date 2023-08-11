@@ -11,7 +11,7 @@ a header-bkg  ?
 ^^^
 ![steps to make an issue](_static/img/issue.png)
 +++ 
-and a footer
+and a footer only on the site, not in full screen
 ```
 
 
