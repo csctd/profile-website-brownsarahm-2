@@ -264,6 +264,14 @@ div.sd-card.pink div.sd-card-footer{
     color:darkmagenta;
 }
 
+div.sd-card-footer:fullscreen {
+    display: none;
+}
+
+div.sd-card-footer:not(:fullscreen) {
+    display: none;
+}
+
 div.admonition.blue>.admonition-title:before {
     background-color: navy;
 }
@@ -283,6 +291,20 @@ div.admonition.pink>.admonition-title:before {
 
 div.admonition.pink>.admonition-title:after {
     color:maroon;
+}
+
+
+#btn-close:not(:fullscreen){
+    display:none;
+}
+
+#btn-close:fullscreen {
+    display:block;
+}
+
+#presentation:fullscreen{
+    display: none;
+
 }
 
 @keyframes fade {
