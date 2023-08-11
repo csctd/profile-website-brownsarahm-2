@@ -5,8 +5,10 @@ admonitions require a title, so factor that into your choice
 ```
 
 ```{note}
-this and the warning above are also admonitions, but not `:class: slide` so they do not change
+this and the warning above are also admonitions, but not `:class: slide` so they are always here
 ```
+
+
 
 ```{admonition} Py Data Theme variables
 :class: slide

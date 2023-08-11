@@ -1,9 +1,14 @@
 # Fancy A
 
 ```{warning}
-admonitions require a title and  this uses an admonition
+admonitions require a title and this uses an admonition without the slide class
 ```
 
+```{hint}
+in a markdown file, you can mix html and markdown
+```
+
+<div class = "slideshow-container" id ='slideshow'>
 
 ```{admonition} Py Data Theme variables
 :class: slide, blue, codeicon
@@ -23,3 +28,9 @@ admonitions require a title and  this uses an admonition
 
 ![steps to make an issue](_static/img/issue.png)
 ```
+
+```{include} _static/buttons.html
+```
+</div>
+
+and controls: 

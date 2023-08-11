@@ -1,6 +1,6 @@
 # Cards
 
-_a tagline above all slides _
+_a tagline above all slides_
 
 ```{card} 
 :class-card: slide
