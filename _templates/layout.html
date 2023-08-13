@@ -1,14 +1,20 @@
 {% extends '!layout.html' %}
 
 {% block footer %}
-
+<!--  the stuff above here makes your pages work regularly -->
+<!--  the stuff below here puts javascript on all of the pages -->
 
 <script>
+    // this section is javascript, not HTML evn though it's in the HTML file
     let slideIndex = 0;
     let slides = document.getElementsByClassName("slide");
-    if (slides.length > 0 ){
-        showSlides();
-    }
+    let slideTime = 5000;
+    // var slideInterval = setInterval(showSlides, slideTime);
+    // clearInterval(slideInterval);
+
+    // if (slides.length > 0 ){
+    //     showSlides();
+    // }
 
     function showSlides() {
         let i;
@@ -32,11 +38,13 @@
         // slides[slideIndex - 1].style.display = "block";
         // slides[slideIndex-1].setAttribute("style","display:block");
         // dots[slideIndex - 1].className += " active";
-        setTimeout(showSlides, 5000); // Change image every 2 seconds
+        // setTimeout(showSlides, slideTime); // Change image every 2 seconds
     }
 
-
+//  make full screen mode
     function openFullscreen() {
+        var elem = document.getElementById('slideshow');
+        console.log('fullscreen');
             if (elem.requestFullscreen) {
                 elem.requestFullscreen();
             } else if (elem.mozRequestFullScreen) { /* Firefox */
@@ -46,6 +54,8 @@
             } else if (elem.msRequestFullscreen) { /* IE/Edge */
                 elem.msRequestFullscreen();
             }
+        showSlides()
+        slideInterval = setInterval(showSlides, slideTime);
     }
 
 
@@ -59,6 +69,8 @@
             } else if (document.msExitFullscreen) { /* IE/Edge */
                 document.msExitFullscreen();
             }
+
+        clearInterval(slideInterval);
         }
 </script>
 {% endblock %}

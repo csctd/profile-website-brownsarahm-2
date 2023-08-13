@@ -77,12 +77,13 @@ html_static_path = ['_static']
 html_sidebars = {
     "index": ["hello.html"],
     "about": ["hello.html"],
-    "resume": ["hello.html"],
+    "projects": ["hello.html"],
     "news": ["hello.html", 'archives.html'],
     "news/**": ['postcard.html', 'recentposts.html', 'archives.html'],
     "blog": ['tagcloud.html', 'archives.html'],
     "blog/**": ['postcard.html', 'recentposts.html', 'archives.html'],
-    "pechakucha":[]
+    "pechakucha":[], 
+    "social":[],
 }
 
 
@@ -107,7 +108,7 @@ myst_enable_extensions = [
     "fieldlist",
     "html_admonition",
     "html_image",
-    # "attrs_block",
+    "attrs_block",
     "replacements",
     "smartquotes",
     "strikethrough",

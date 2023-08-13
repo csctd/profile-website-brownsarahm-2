@@ -131,14 +131,15 @@ div.timeline div.entry.right::after {
 
 
 
-.sd-card{
+.card{
     overflow: hidden;
     width: 100%;
-    height: 90%;
-    max-width: 100%;
-    max-height: 90%;
 }
 
+.card:fullscreen {
+    width: 90%;
+    padding-left: 5%;
+}
 
 
 .slide img {
@@ -147,10 +148,9 @@ div.timeline div.entry.right::after {
 }
 
 .slide {
-    display: none;
+    /* display: none; */
     animation-name: fade;
     animation-duration: 1.5s;
-    scroll-snap-align: center;
 }
 /* make slides wider */
 
@@ -257,20 +257,13 @@ div.sd-card.pink div.sd-card-header {
     background-color:  pink;
 }
 
-/*  define the blue  admonitions*/
+/*  define the pink admonitions*/
 div.sd-card.pink div.sd-card-footer{
     border-color: hotpink;
     background-color: lightpink;
     color:darkmagenta;
 }
 
-div.sd-card-footer:fullscreen {
-    display: none;
-}
-
-div.sd-card-footer:not(:fullscreen) {
-    display: none;
-}
 
 div.admonition.blue>.admonition-title:before {
     background-color: navy;
@@ -293,27 +286,123 @@ div.admonition.pink>.admonition-title:after {
     color:maroon;
 }
 
+/* presentation mode -------------------------------- */
 
-#btn-close:not(:fullscreen){
+/* hide footer in fullscreen */
+#slideshow:fullscreen div.sd-card-footer{
+    display: none;
+}
+
+#slideshow:not(:fullscreen) div.sd-card-footer {
+    display: inherit;
+}
+
+#slideshow{
+    text-align: center;
+}
+
+#slideshow:fullscreen {
+    background-color: 000000;
+    vertical-align: middle;
+}
+
+#slideshow:not(:fullscreen) {
+    background-color:inherit;
+}
+
+/* #slideshow:fullscreen .controls{
+    text-align: right;
+    position: absolute;
+    bottom: 0;
+    right:0;
+} */
+
+#slideshow:not(:fullscreen) .controls {
+    text-align: right;
+}
+
+/* maximize cards in fullscreen */
+#slideshow:not(:fullscreen) div.sd-card{
+    height: inherit;
+}
+
+#slideshow:fullscreen div.sd-card {
+    height: 100%;
+    border: 0px;
+}
+
+/* site view only on in fullscreen */
+#slideshow:not(:fullscreen) #pageview{
     display:none;
 }
 
-#btn-close:fullscreen {
+#slideshow:fullscreen #pageview{
     display:block;
 }
 
-#presentation:fullscreen{
+/* presentation button off in fullscreen */
+#slideshow:fullscreen #presentation{
     display: none;
-
 }
 
+#slideshow:not(:fullscreen) #presentation{
+    display: flex;
+}
+
+
+/* theme  */
+
+/* body{
+    background-color: purple;
+} */
+
+
+
+
+/* slide animation opacity */
 @keyframes fade {
     from {
-        opacity: .4
+        opacity: .1
     }
 
     to {
         opacity: 1
+    }
+}
+
+/* slide animation slide in */
+@keyframes slidein {
+    from {
+        margin-left: 100%;
+        width: 300%;
+    }
+
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
+}
+
+
+@keyframes slideinout {
+    0% {
+        margin-left: 100%;
+        width: 300%;
+    }
+
+    5% {
+        margin-left: 0%;
+        width: 100%;
+    }
+
+    95% {
+        margin-left: 0%;
+        width: 100%;
+    }
+
+    100% {
+        margin-left: -100%;
+        width: 300%;
     }
 }
 
