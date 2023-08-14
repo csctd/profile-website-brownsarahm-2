@@ -1,0 +1,91 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "Animate in a carosel",
+  "steps": [
+    {
+      "file": "pkcards-carosel.md",
+      "description": "You'll work in your `pechakucha.md` instead. In this example since I have separate versions, I needed to name them differently. Wrap each of your images with a wrapper here. the `card` makes the card container for the slides that has an image. the card can also have a footer on it.  We'll add css to hide this part. ",
+      "line": 19
+    },
+    {
+      "file": "_static/buttons.html",
+      "description": "create a `_static/buttons.html` and copy this content in. ",
+      "line": 10
+    },
+    {
+      "file": "_static/buttons.html",
+      "description": "If you want to change how the buttons look you can add or swap the class and change the display text in the `value` attribute. \n\nWe will add functional css to the `pageview` id soon, so do not alter this. ",
+      "line": 4
+    },
+    {
+      "file": "_static/buttons.html",
+      "description": "like the close button, you can change the class and value, but not the id",
+      "line": 6
+    },
+    {
+      "file": "_templates/layout.html",
+      "description": "copy all of the content from this layout.html into yours. this includes modified javascript that enables the slides to autochange in full screen mode, but stay visible in regular mode. ",
+      "line": 1
+    },
+    {
+      "file": "pkcards-carosel.md",
+      "description": "add these two lines into your `pechakucha.md` file to give your presentation some controls. ",
+      "line": 11
+    },
+    {
+      "file": "pkcards-carosel.md",
+      "description": "Add this line inside of your `#slideshow` element and to wrap your cards in a carosel. \n\nThe number determines how many cards are visible at a time.  You can use any number of backticks, (`) as long it is more than you used to create the cards. I used 3 (the minimum) for the cards, so I'm using 4 here. ",
+      "line": 16
+    },
+    {
+      "file": "pkcards-carosel.md",
+      "description": "add this to close the carosel. \n\nThis has to be the same number of ` as the top. ",
+      "line": 76
+    },
+    {
+      "file": "pkcards-carosel.md",
+      "description": "add a wrapper dive with `id='slideshow'` to contain your presentation and controls so that we can maximize this part of the site. ",
+      "line": 5
+    },
+    {
+      "file": "pkcards-carosel.md",
+      "description": "close that div at the bottom of the page",
+      "line": 70
+    },
+    {
+      "file": "pkcards-carosel.md",
+      "description": "optionally, you can add additional classes that you write yourself to customize the look of your slides. ",
+      "line": 45
+    },
+    {
+      "file": "_static/custom.css",
+      "description": "this makes it so that the card footer is hidden in full screen. It uses the `slideshow` id selector with the `:fullscreen` decorator and controls only divs with the `sd-card-footer` class.  I figured this out by inspecting the rendered site after I had added a footer. ",
+      "line": 292
+    },
+    {
+      "file": "_static/custom.css",
+      "description": "this toggles the background aroudn the slides between full screen and not. You can also set other style for the two modes in this CSS.",
+      "line": 304
+    },
+    {
+      "file": "_static/custom.css",
+      "description": "This toggles the site/ presentation buttons that control the view to only show in the view where it makes sense to make use them. ",
+      "line": 334
+    },
+    {
+      "file": "_static/custom.css",
+      "description": "this is an example of changing the slide footer to pink",
+      "line": 261
+    },
+    {
+      "file": "_static/custom.css",
+      "description": "this controls how faded out your slide gets. the `fade` is an animation name that we set for the `slide` class elsewhere. Below here are two other examples. ",
+      "line": 363
+    },
+    {
+      "file": "_static/custom.css",
+      "description": "this sets that the slides (which is what the javascript changes between visible and not) how the appear on the page. \n\nthe animation name selects an animation definitino that is indluded as a `@keyframe` in this file. the duration is how long it takes to complete the animation. ",
+      "line": 150
+    }
+  ]
+}

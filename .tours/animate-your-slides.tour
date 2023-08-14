@@ -1,0 +1,26 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "Animate your slides",
+  "steps": [
+    {
+      "file": "pkcards.md",
+      "description": "You'll do this step in your `pechakucha.md` I have multiple options, so I had to name them differently. \n\nWrap each of your images with a container that is the `slide` class. A card is a good choice, but you can also write a div in directly.\n\nThe card has first line, then the classes, a blank line, your content and backticks to close. \n\nIf you want a play/pause button you can continue the tour, otherwise you are done!",
+      "line": 8
+    },
+    {
+      "file": "_static/play_pause.html",
+      "description": "If you want to add a play/pause button, create a new file called `play_pause.html` and copy this content in ",
+      "line": 1
+    },
+    {
+      "file": "pkcards.md",
+      "description": "If you would like to have a play/pause button, add these two lines to link them in. ",
+      "line": 5
+    },
+    {
+      "file": "_templates/layout.html",
+      "description": "Copy all of this content to your `_templates/layout.html`",
+      "line": 1
+    }
+  ]
+}
