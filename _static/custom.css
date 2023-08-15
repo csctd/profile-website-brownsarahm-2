@@ -131,7 +131,7 @@ div.timeline div.entry.right::after {
 
 
 
-.card{
+/* .card{
     overflow: hidden;
     width: 100%;
 }
@@ -139,12 +139,13 @@ div.timeline div.entry.right::after {
 .card:fullscreen {
     width: 90%;
     padding-left: 5%;
-}
+} */
 
 
 .slide img {
     vertical-align: middle;
     max-height: 800px;
+    align-self: center;
 }
 
 .slide {
@@ -154,14 +155,14 @@ div.timeline div.entry.right::after {
 }
 /* make slides wider */
 
-div.slide {
+/* div.slide {
     flex-grow: 1;
     max-width: 100%;
-}
-
+} */
+/* 
 img {
     vertical-align: middle;
-}
+} */
 
 
 /* Slideshow container */
@@ -297,18 +298,21 @@ div.admonition.pink>.admonition-title:after {
     display: inherit;
 }
 
-#slideshow{
-    text-align: center;
+#slideshow:fullscreen{
+    overflow: hidden;
+}
+#slideshow::backdrop {
+    background-color: darkblue;
+}
+/* 
+#slideshow:fullscreen div.sd-card-body{
+    background-color: CCCCCC !important;
 }
 
-#slideshow:fullscreen {
-    background-color: 000000;
-    vertical-align: middle;
-}
 
-#slideshow:not(:fullscreen) {
+#slideshow:not(:fullscreen) div.sd-card{
     background-color:inherit;
-}
+} */
 
 /* #slideshow:fullscreen .controls{
     text-align: right;
@@ -321,14 +325,44 @@ div.admonition.pink>.admonition-title:after {
     text-align: right;
 }
 
-/* maximize cards in fullscreen */
-#slideshow:not(:fullscreen) div.sd-card{
-    height: inherit;
+/* put controls inthe bottm right of the screen and 
+       on top of the slides in fullscreen */
+#slideshow:fullscreen div.controls {
+   position:absolute;
+   bottom:0px;
+   right: 0px;
+   z-index: 100; 
 }
 
+
+#slideshow:not(:fullscreen) .slide{
+    display: block;
+}
+
+/* maximize cards in fullscreen */
+/*  maximize carousel so that cards can be maxed*/
+#slideshow:fullscreen div.sd-cards-carousel {
+    height: 100%;
+    overflow: hidden;
+}
+/*  maximize the cards */
 #slideshow:fullscreen div.sd-card {
     height: 100%;
-    border: 0px;
+    width: 100%;
+    /* text-align: center;
+    vertical-align: middle; */
+    display: inline;
+}
+/* defaults back */
+#slideshow:not(:fullscreen) div.sd-card {
+    height: inherit;
+}
+/* center the images in fullscreen */
+#slideshow:fullscreen div.sd-card img{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
 }
 
 /* site view only on in fullscreen */
@@ -346,7 +380,7 @@ div.admonition.pink>.admonition-title:after {
 }
 
 #slideshow:not(:fullscreen) #presentation{
-    display: flex;
+    display: block;
 }
 
 
