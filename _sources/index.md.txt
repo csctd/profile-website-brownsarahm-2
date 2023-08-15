@@ -7,8 +7,10 @@
 :maxdepth: 2
 :hidden:
 
+projects
 pkcards
-pkadmonition
 pkcards-style
+pkcards-carosel
+pkadmonition
 pkadmonition-style
 ```

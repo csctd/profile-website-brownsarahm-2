@@ -59,7 +59,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'pkadmonition-style';</script>
     <link rel="index" title="Index" href="../genindex/" />
     <link rel="search" title="Search" href="../search/" />
-    <link rel="prev" title="Fancy C" href="../pkcards-style/" />
+    <link rel="prev" title="Admonition" href="../pkadmonition/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -146,15 +146,15 @@
   <ul class="bd-navbar-elements navbar-nav">
     
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../pkcards/">
-                        Cards
+                      <a class="nav-link nav-internal" href="../projects/">
+                        Projects
                       </a>
                     </li>
                 
 
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../pkadmonition/">
-                        Admonition
+                      <a class="nav-link nav-internal" href="../pkcards/">
+                        Cards
                       </a>
                     </li>
                 
@@ -166,12 +166,34 @@
                     </li>
                 
 
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../pkcards-carosel/">
+                        carosel
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../pkadmonition/">
+                        Admonition
+                      </a>
+                    </li>
+                
+            <div class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                </button>
+                <div class="dropdown-menu">
+                    
                     <li class="nav-item current active">
                       <a class="nav-link nav-internal" href="#">
                         Fancy A
                       </a>
                     </li>
                 
+                </div>
+            </div>
+            
   </ul>
 </nav></div>
       
@@ -274,15 +296,15 @@ document.write(`
   <ul class="bd-navbar-elements navbar-nav">
     
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../pkcards/">
-                        Cards
+                      <a class="nav-link nav-internal" href="../projects/">
+                        Projects
                       </a>
                     </li>
                 
 
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../pkadmonition/">
-                        Admonition
+                      <a class="nav-link nav-internal" href="../pkcards/">
+                        Cards
                       </a>
                     </li>
                 
@@ -294,12 +316,34 @@ document.write(`
                     </li>
                 
 
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../pkcards-carosel/">
+                        carosel
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../pkadmonition/">
+                        Admonition
+                      </a>
+                    </li>
+                
+            <div class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                </button>
+                <div class="dropdown-menu">
+                    
                     <li class="nav-item current active">
                       <a class="nav-link nav-internal" href="#">
                         Fancy A
                       </a>
                     </li>
                 
+                </div>
+            </div>
+            
   </ul>
 </nav></div>
         
@@ -401,7 +445,7 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-<section class="tex2jax_ignore mathjax_ignore" id="fancy-a">
+<section id="fancy-a">
 <h1>Fancy A<a class="headerlink" href="#fancy-a" title="Permalink to this heading">#</a></h1>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -424,10 +468,13 @@ document.write(`
 <p class="admonition-title">Making an Issue</p>
 <p><img alt="steps to make an issue" src="../_images/issue.png" /></p>
 </div>
-<input class='btn btn-warning' id="btn-close" type="button" value="site view" onclick="closeFullscreen()">
-<!--  -->
-<button class='btn btn-info' id="presentation" onclick="var el = document.getElementById('slideshow'); el.webkitRequestFullscreen();">
-    Presentation view</button>
+<!-- a container for the buttons -->
+<div class="controls">
+    <!-- the btn,  btn-dark, and btn-info classes come from Bootstrap-->
+<input class='btn btn-dark' id="pageview" type="button" value="X" onclick="closeFullscreen()"/>
+<input class='btn btn-info' id="presentation" type="button" value="Present" onclick="openFullscreen()"/>
+<!-- the fucntions called by buttons are defined in layout.html -->
+</div>
 </div>
 <p>and controls:</p>
 </section>
@@ -448,12 +495,12 @@ document.write(`
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../pkcards-style/"
+       href="../pkadmonition/"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Fancy C</p>
+        <p class="prev-next-title">Admonition</p>
       </div>
     </a>
 </div></div>
@@ -480,14 +527,20 @@ document.write(`
   <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
 <script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
 
-
+<!--  the stuff above here makes your pages work regularly -->
+<!--  the stuff below here puts javascript on all of the pages -->
 
 <script>
+    // this section is javascript, not HTML evn though it's in the HTML file
     let slideIndex = 0;
     let slides = document.getElementsByClassName("slide");
-    if (slides.length > 0 ){
-        showSlides();
-    }
+    let slideTime = 5000;
+    // var slideInterval = setInterval(showSlides, slideTime);
+    // clearInterval(slideInterval);
+
+    // if (slides.length > 0 ){
+    //     showSlides();
+    // }
 
     function showSlides() {
         let i;
@@ -504,18 +557,30 @@ document.write(`
         }
         slideIndex++;
         if (slideIndex > slides.length) { slideIndex = 1 }
-        slides[slideIndex - 1].style.display = "block";
+        slides[slideIndex - 1].style.display = "inline";
         // for (i = 0; i < dots.length; i++) {
         //     dots[i].className = dots[i].className.replace(" active", "");
         // }
         // slides[slideIndex - 1].style.display = "block";
         // slides[slideIndex-1].setAttribute("style","display:block");
         // dots[slideIndex - 1].className += " active";
-        setTimeout(showSlides, 5000); // Change image every 2 seconds
+        // setTimeout(showSlides, slideTime); // Change image every 2 seconds
     }
 
+    // show all again if not playing
+    function showAll() {
+        let i;
+        let slides = document.getElementsByClassName("slide");
 
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "block";
+        }
+    }
+
+//  make full screen mode
     function openFullscreen() {
+        var elem = document.getElementById('slideshow');
+        console.log('fullscreen');
             if (elem.requestFullscreen) {
                 elem.requestFullscreen();
             } else if (elem.mozRequestFullScreen) { /* Firefox */
@@ -525,6 +590,8 @@ document.write(`
             } else if (elem.msRequestFullscreen) { /* IE/Edge */
                 elem.msRequestFullscreen();
             }
+        showSlides()
+        slideInterval = setInterval(showSlides, slideTime);
     }
 
 
@@ -538,6 +605,9 @@ document.write(`
             } else if (document.msExitFullscreen) { /* IE/Edge */
                 document.msExitFullscreen();
             }
+
+        clearInterval(slideInterval);
+        showAll();
         }
 </script>
 

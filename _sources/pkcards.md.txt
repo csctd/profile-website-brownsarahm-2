@@ -2,6 +2,9 @@
 
 _a tagline above all slides_
 
+```{include} _static/play_pause.html
+```
+
 ```{card} 
 :class-card: slide
 

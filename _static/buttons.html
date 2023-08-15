@@ -1,4 +1,10 @@
-<input class='btn btn-warning' id="btn-close" type="button" value="site view" onclick="closeFullscreen()">
-<!--  -->
-<button class='btn btn-info' id="presentation" onclick="var el = document.getElementById('slideshow'); el.webkitRequestFullscreen();">
-    Presentation view</button>
+<!-- a container for the buttons -->
+<div class="controls">
+    <!-- the btn,  btn-dark, and btn-info classes come from Bootstrap-->
+<input class='btn btn-dark' id="pageview" type="button" value="X" onclick="closeFullscreen()"/>
+
+<input class='btn btn-info' id="presentation" type="button" value="Present" onclick="openFullscreen()"/>
+
+<!-- the fucntions called by buttons are defined in layout.html -->
+
+</div>
